@@ -23,7 +23,7 @@ You can name editable sections with any tag, placing an {{editable ...}} tag wil
 
 And if you click it an edit box will popup:
 
-![image](https://github.com/user-attachments/assets/0cd3bef4-3222-404d-9590-43e263b7a8a8)
+![image](https://github.com/user-attachments/assets/1033a3bc-cd98-495d-9e7b-5090a3930c36)
 
 ## Howto manual setup (step-by-step)
 1. copy pipeps.min.php in your webserver, ideally OUT OF THE www public folder, and create a index.php file in the www public folder including an <?php include("../path/to/pipeps.min.php"); pointing the path of pipeps.min.php.
