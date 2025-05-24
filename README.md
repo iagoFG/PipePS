@@ -36,4 +36,4 @@ By default PipePS will store editable sections contents as html files in the sit
 6. next to etc/ folder another folder named usr-AB12-CD34-EF45/ (use same own code used for config file)
 7. inside usr-.../ create another folder named tpl/ with the example default.html file in the intro
 8. reload on your browser, you should see now the interpreted html template instead of a blank page
-9. optional: next to tpl/ create the empty folders edit/ sessions/ and users/ and then create inside a YOUR_USER_NAME.user file replacing values, with the following contents: &user=YOUR_USER_NAME&hash=PASSWORD_MD5_HASH&perm.edit=1&
+9. next to tpl/ create the empty folders edit/ sessions/ and users/ and then create inside a YOUR_USER_NAME.user file replacing values, with the following contents: &user=YOUR_USER_NAME&hash=PASSWORD_MD5_HASH&perm.edit=1&
