@@ -32,8 +32,8 @@ By default PipePS will store editable sections contents as html files in the sit
 2. access to index.php with your browser: should see a blank page: pipeps.log WILL BE CREATED somewhere.
 3. locate pipeps.log: it should be on /var/log or /tmp or C:\Windows\Temp or maybe in sys_get_temp_dir() folder ...or near index.php (this lastone alternative is NOT RECOMMENDED and you should AVOID it)
 4. create your first site folder: localhost/ or domain.com/ or 12.34.56.78/ (whatever used in browser, check log)
-5. inside an etc/ folder with empty index.html and a config like AB12-CD34-EF45-GH67.php with your own code
-6. next to etc/ folder another folder named usr-AB12-CD34-EF45-GH67/ (use same own code used for config file)
+5. inside place etc/ folder, empty index.html, a config named like AB12-CD34-EF45.php with your own named-code
+6. next to etc/ folder another folder named usr-AB12-CD34-EF45/ (use same own code used for config file)
 7. inside usr-.../ create another folder named tpl/ with a default.html html with {{...}} templated file
 8. reload on your browser, you should see default.html instead of a blank page {{...}} interpreted and shown
 9. optional: create the other folders next to tpl/: an edit/ folder, a sessions/ folder and an users/ folder.
