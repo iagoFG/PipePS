@@ -1,6 +1,6 @@
 # PipePS
 
-## A minimalistic CMS with onsite content editor
+## A flexible minimalistic CMS with onsite content editor
 
 ```html
      <!DOCTYPE html>
@@ -15,7 +15,15 @@
        </body>
      </html>
 ```
-Example of default.html in the tpl/ folder. You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or if you login an edit tag will appear and if you click it an edit box will popup.
+Example of default.html in the tpl/ folder.
+
+You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or, if you login with a user allowed to edit, an edit tag will appear:
+
+![image](https://github.com/user-attachments/assets/36cfbf98-78a8-4a39-9fff-4b4c744a259c)
+
+And if you click it an edit box will popup:
+
+![image](https://github.com/user-attachments/assets/0cd3bef4-3222-404d-9590-43e263b7a8a8)
 
 ## Howto manual setup (step-by-step)
 1. copy pipeps.min.php in your webserver, ideally OUT OF THE www public folder, and create a index.php file in the www public folder including an <?php include("../.../pipeps.min.php"); pointing the path of pipeps.min.php.
