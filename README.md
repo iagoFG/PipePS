@@ -25,6 +25,8 @@ And if you click it an edit box will popup:
 
 ![image](https://github.com/user-attachments/assets/1033a3bc-cd98-495d-9e7b-5090a3930c36)
 
+By default PipePS will store editable sections contents as html files in the site/usr-CODE/edit/ folder where are loadable by webservices or by the CMS itself.
+
 ## Howto manual setup (step-by-step)
 1. copy pipeps.min.php in your webserver, ideally OUT OF THE www public folder, and create a index.php file in the www public folder including an <?php include("../path/to/pipeps.min.php"); pointing the path of pipeps.min.php.
 2. access from the browser to index.php, you should get a white empty page, but a pipeps.log file will be created reporting found problems (PipePS does not log errors to stdout except extreme cases).
