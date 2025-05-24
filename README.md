@@ -30,7 +30,7 @@ By default PipePS will store editable sections contents as html files in the sit
 ## Howto manual setup (step-by-step)
 1. copy pipeps.min.php into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
 2. access to index.php with your browser: should see a blank page: PIPEPS.LOG WILL BE CREATED somewhere.
-3. locate pipeps.log: 'd be on /var/log or /tmp or C:\Windows\Temp or sys_get_temp_dir() folder ...or near index.php (NOT recommended)
+3. locate pipeps.log: it should be on /var/log or /tmp or C:\Windows\Temp or sys_get_temp_dir() folder ...or near index.php (this lastone alternative is NOT recommended and you should change it)
 4. create your first site folder: localhost/ or domain.com/ or 12.34.56.78/ (whatever used in browser, check log)
 5. inside an etc/ folder with empty index.html and a config like AB12-CD34-EF45-GH67.php with your own code
 6. next to etc/ folder another folder named usr-AB12-CD34-EF45-GH67/ (use same own code used for config file)
