@@ -1,0 +1,1 @@
+<?php echo("[YOUR SITE CONFIG FILE CAN HAVE PHP CODE] \n");
