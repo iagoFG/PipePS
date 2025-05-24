@@ -28,10 +28,11 @@ And if you click it an edit box will popup:
 By default PipePS will store editable sections contents as html files in the site/usr-CODE/edit/ folder where are loadable by webservices or by the CMS itself.
 
 ## Howto manual setup (step-by-step)
-1. copy pipeps.min.php in your webserver, ideally OUT OF THE www public folder, and create a index.php file in the www public folder including an <?php include("../path/to/pipeps.min.php"); pointing the path of pipeps.min.php.
-2. access from the browser to index.php, you should get a white empty page, but a pipeps.log file will be created reporting found problems (PipePS does not log errors to stdout except extreme cases).
-3. to proceed further you need to locate the pipeps.log: usually by default PipePS will create the file (or append data) on one of the following locations: /var/log or /tmp or C:\Windows\Temp or PHP sys_get_temp_dir() folder or --only if last resort-- in the same folder ./ of index.php (but this last option is severely NOT recomended). IF you couldn't locate pipeps.log or if it was created in the wrong place try to make one of the other locations available by creating an empty file and giving permissions to it or define a new no-public-accesible location in $GLOBALS['pipeps-config'] > log-path at pipeps.min.php beginning.
-4. following step is creating a site folder next to index.php (or in other location if you change pipeps.min.php configuration at the file top). You should name it localhost/ or if your domain.com/
-5. inside the site folder create an etc/ folder with both a configuration php file named like LONG-CODE-TYPE-NAME.php (for example AB12-CD34-EF45-GH67.php ...that name will be used as the internal site id for other folders/files). You must also create an empty or root-redirecting index.html for security reasons.
-6. next to etc/ folder create a folder named usr-AB12-CD34-EF45-GH67/ and inside create a folder named tpl/ with a default.html template file.
-7. next to the tpl/ folder create an edit/ folder, a sessions/ folder and an users/ folder.
+1. copy pipeps.min.php in your webserver and create an index.php including it <?php include("../path/to/pipeps.min.php"); (ideally place pipeps.min.php OUT of the www public folder).
+2. access from the browser to index.php you should get a blank page AND A PIPEPS.LOG FILE WILL BE CREATED somewhere.
+3. locate pipeps.log: usually should be on /var/log or /tmp or C:\Windows\Temp or PHP sys_get_temp_dir() folder or --only if couldn't write elsewhere-- could be in the same folder ./ of index.php (not recommended).
+4. create your first site folder, for starting you can create it next to index.php (auto-config) and should be named what you use in your browser: localhost/ or domain.com/ or 12.34.56.78/ (whatever you use, pipeps.min.php should detect it, check in the log).
+5. inside the site folder create an etc/ folder with a couple of files: a configuration php file named like LONG-CODE-TYPE-NAME.php (for example AB12-CD34-EF45-GH67.php, but you should write your own) and an empty index.html (for basic security reasons, but is better to place the site folder outside the www public folder).
+6. next to etc/ folder create a folder named with the same code you used for the etc config file, for example usr-AB12-CD34-EF45-GH67/
+7. inside usr-.../ create another folder named tpl/ with a default.html template file. Reload page on browser, default.html contents should be shown.
+8. finally optional: you can create some other folders like an edit/ folder, a sessions/ folder and an users/ folder, next to the tpl/ folder previously created.
