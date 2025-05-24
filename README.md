@@ -1,5 +1,22 @@
 # PipePS
 
+## A minimalistic CMS with onsite content editor
+
+```html
+     <!DOCTYPE html>
+     <html>
+       <body>
+         <header class="text-end">{{login panel}}<hr></header>
+         <main>
+           <section class="col-sm-4">{{editable section_1}}</section>
+           <section class="col-sm-4">{{editable section_2}}</section>
+           <section class="col-sm-4">{{editable section_3}}</section>
+         </main>
+       </body>
+     </html>
+```
+Example of default.html in the tpl/ folder. You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or if you login an edit tag will appear and if you click it an edit box will popup.
+
 ## Howto manual setup (step-by-step)
 1. copy pipeps.min.php in your webserver, ideally OUT OF THE www public folder, and create a index.php file in the www public folder including an <?php include("../.../pipeps.min.php"); pointing the path of pipeps.min.php.
 2. access from the browser to index.php, you should get a white empty page, but a pipeps.log file will be created reporting found problems (PipePS does not log errors to stdout except extreme cases).
