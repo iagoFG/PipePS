@@ -15,7 +15,7 @@
        </body>
      </html>
 ```
-Example of default.html in the tpl/ folder.
+Example of default.html in the tpl/ folder. If not other mode like a non automatic or library is specified with $GLOBALS['pipeps-mode'] before including pipeps.min.php, then the actions of the programmable main/default sequence in the topmost configuration section will be executed (init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter) resulting in rendering the corresponding {{...}} template, for example default.html like shown.
 
 You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or, if you login with a user allowed to edit, an edit tag will appear:
 
