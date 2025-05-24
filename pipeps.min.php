@@ -92,4 +92,4 @@ if (!function_exists('hex2bin')) { function hex2bin($hexstr) { static $table = F
 if (!function_exists('var_export')) { function var_export($expression, $return) { if ($return) return serialize($expression); else return print_r($expression); } } /// if var_export is not available in the current enviroment, define instead a polyfill
 if (!function_exists('sys_get_temp_dir')) { function sys_get_temp_dir() { return '/tmp'; } } /// if sys_get_temp_dir is not available in the current enviroment, define instead a polyfill
 if (!function_exists('debug_backtrace')) { function debug_backtrace() { return array(); } } /// if debug_backtrace is not available in the current enviroment, define instead a polyfill
-main(pipeps($GLOBALS['pipeps-config'])); /// END OF METHOD DEFINITIONS (after this init pipeps and call main) ////////////
+if (!isset($GLOBALS['pipeps-mode']) || $GLOBALS['pipeps-mode'] !== -1) main(pipeps($GLOBALS['pipeps-config'])); /// END OF METHOD DEFINITIONS (after this init pipeps and call main) ////////////
