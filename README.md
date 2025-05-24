@@ -30,10 +30,10 @@ By default PipePS will store editable sections contents as html files in the sit
 ## Howto manual setup (step-by-step)
 1. copy pipeps.min.php into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
 2. access to index.php with your browser: should see a blank page: PIPEPS.LOG WILL BE CREATED somewhere.
-3. locate pipeps.log: 'd be on /var/log or /tmp or C:\Windows\Temp or sys_get_temp_dir() folder or near index.php (NOT recommended)
+3. locate pipeps.log: 'd be on /var/log or /tmp or C:\Windows\Temp or sys_get_temp_dir() folder ...or near index.php (NOT recommended)
 4. create your first site folder: localhost/ or domain.com/ or 12.34.56.78/ (whatever used in browser, check log)
-5. inside create an etc/ folder with a configuration php like AB12-CD34-EF45-GH67.php, but you should write your own code, and an empty index.html
-6. next to etc/ folder create a folder named usr-AB12-CD34-EF45-GH67/ (use your own code used for the config file, check in pipeps.log)
-7. inside usr-.../ create another folder named tpl/ with a default.html template file.
-8. reload on your browser, instead of a blank page the default.html template contents {{...}} should be interpreted and shown.
-9. optional: you can create the other folders next to tpl/: an edit/ folder, a sessions/ folder and an users/ folder.
+5. inside an etc/ folder with empty index.html and a config like AB12-CD34-EF45-GH67.php with your own code
+6. next to etc/ folder another folder named usr-AB12-CD34-EF45-GH67/ (use same own code used for config file)
+7. inside usr-.../ create another folder named tpl/ with a default.html html with {{...}} templated file
+8. reload on your browser, you should see default.html instead of a blank page {{...}} interpreted and shown
+9. optional: create the other folders next to tpl/: an edit/ folder, a sessions/ folder and an users/ folder.
