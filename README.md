@@ -25,7 +25,7 @@ And if you click it an edit box will popup:
 
 ![image](https://github.com/user-attachments/assets/1033a3bc-cd98-495d-9e7b-5090a3930c36)
 
-By default PipePS will load and store all resources including templates, editable sections and other contents using **a virtual I/O system managed with $handleset that any module can extend to any kind of storage type** (default mode is as plain files in the site/usr-CODE/edit/ folder but you can override it and store on databases, in remote distributed filesystems, or in your own defined way).
+PipePS will load and store all data resources including templates, editable sections and other contents using **an agnostic virtual I/O system managed with $handleset callbacks that any module can extend to use/implement any kind of storage type** (default mode is as plain files but you can override it and store on databases, on remote distributed filesystems, or in your own defined service).
 
 ## HOW-TO manual setup (step-by-step)
 1. **copy pipeps.min.php** into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
