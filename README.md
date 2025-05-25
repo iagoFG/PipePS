@@ -15,7 +15,7 @@
        </body>
      </html>
 ```
-Example of default.html in the tpl/ folder. Superfast response times. Both headless and html modes. Template processor that can be used either on xml, json, or on html files. Customizable by setting configuration variables before including pipeps.min.php: with $GLOBALS['pipeps-mode'] you switch modes; fully programmable life-cycle via actions list with the **programmable main/default sequence in the topmost configuration section** (init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter) resulting in rendering the corresponding {{...}} template, for example default.html like shown.
+Example of default.html in the tpl/ folder. Superfast response times. Both headless and html modes. Template processor that can be used either on xml, json, or on html files. Customizable by setting configuration variables before including pipeps.min.php: with $GLOBALS['pipeps-mode'] you switch modes; fully programmable life-cycle via actions list with the **programmable main/default sequence at the top-most part configuration section of pipeps.min.php** (init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter) resulting in rendering the corresponding {{...}} template, for example default.html like shown.
 
 You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or, if you login with a user allowed to edit, an edit tag will appear:
 
