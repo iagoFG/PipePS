@@ -1,6 +1,6 @@
 # PipePS
 
-## A flexible customizable minimalistic CMS with onsite content editor
+## A extensible & customizable minimalistic CMS with onsite content editor
 
 ```html
      <!DOCTYPE html>
