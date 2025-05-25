@@ -15,13 +15,13 @@
        </body>
      </html>
 ```
-Example of default.html in the tpl/ folder. Superfast response times. Both headless and html modes. Template processor that can be used either on xml, json, or on html files. Customizable by setting configuration variables before including pipeps.min.php: with $GLOBALS['pipeps-mode'] you switch modes; fully programmable life-cycle via actions list with the **programmable main/default sequence at the top-most part configuration section of pipeps.min.php** (init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter) resulting in rendering the corresponding {{...}} template, for example default.html like shown.
+Example of default.html in the tpl/ folder. PipePS has superfast response times (usually under 10ms), both headless and html modes, an agnostic template processor that can be used either on html, xml, json and many more formats. Mode is customizable by setting configuration variables before including pipeps.min.php: for example with $GLOBALS['pipeps-mode'] you can switch modes; it has a fully programmable life-cycle via actions list: with the **programmable main/default sequence at the top-most part configuration section of pipeps.min.php** (it runs a list of modules same as your own: init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter). Default sequence results in loading and rendering the site/url corresponding {{...}} template, default.html.
 
-You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or, if you login with a user allowed to edit, an edit tag will appear:
+You can easily create new editable sections by naming them with new tags, placing an {{editable ...}} block that will be replaced with its contents or, if you are logged in with a edit button that allows to change texts onsite:
 
 ![image](https://github.com/user-attachments/assets/36cfbf98-78a8-4a39-9fff-4b4c744a259c)
 
-And if you click it an edit box will popup:
+And as you click it an edit box will popup:
 
 ![image](https://github.com/user-attachments/assets/1033a3bc-cd98-495d-9e7b-5090a3930c36)
 
