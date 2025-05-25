@@ -15,7 +15,7 @@
        </body>
      </html>
 ```
-Example of default.html in the tpl/ folder. If not other mode like a non automatic or library is specified with $GLOBALS['pipeps-mode'] before including pipeps.min.php, then the actions of the **programmable main/default sequence in the topmost configuration section will be executed** (init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter) resulting in rendering the corresponding {{...}} template, for example default.html like shown.
+Example of default.html in the tpl/ folder. Superfast response times. Both headless and html modes. Template processor that can be used either on xml, json, or on html files. Customizable by setting configuration variables before including pipeps.min.php: with $GLOBALS['pipeps-mode'] you switch modes; fully programmable life-cycle via actions list with the **programmable main/default sequence in the topmost configuration section** (init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter) resulting in rendering the corresponding {{...}} template, for example default.html like shown.
 
 You can name editable sections with any tag, placing an {{editable ...}} tag will be replaced with the section contents or, if you login with a user allowed to edit, an edit tag will appear:
 
@@ -25,7 +25,7 @@ And if you click it an edit box will popup:
 
 ![image](https://github.com/user-attachments/assets/1033a3bc-cd98-495d-9e7b-5090a3930c36)
 
-By default PipePS will store editable sections contents as html files in the site/usr-CODE/edit/ folder where are loadable by webservices or by the CMS itself. However **all the file access is done thru the virtual I/O system managed with $handleset that can map files or entire folders into any kind of database, remote filesystem or other kind of resource storage type**.
+By default PipePS will load and store all resources including templates, editable sections and other contents using **a virtual I/O system managed with $handleset that any module can extend to any kind of storage type** (default mode is as plain files in the site/usr-CODE/edit/ folder but you can override it and store on databases, in remote distributed filesystems, or in your own defined way).
 
 ## HOW-TO manual setup (step-by-step)
 1. **copy pipeps.min.php** into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
