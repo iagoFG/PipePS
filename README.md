@@ -28,7 +28,7 @@ And as you click it an edit box will popup:
 PipePS will load and store all data resources including templates, editable sections and other contents using **an agnostic virtual I/O system managed with $handleset callbacks that any module can extend to use/implement any kind of storage type** (default mode is as plain files but you can override it and store on databases, on remote distributed filesystems, or in your own defined service).
 
 ## HOW-TO manual setup (step-by-step)
-A basic site is provided in the folder example/ however if you need/want to setup manually the environment you can follow these instructions:
+A basic prebuilt site is provided in the folder example/ ...however if you need/want to setup manually the environment you can follow these instructions:
 1. **copy <a href="https://github.com/iagoFG/PipePS/blob/main/pipeps.min.php">pipeps.min.php</a>** into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
 2. **open the index.php** with your browser: should see a blank page: pipeps.log WILL BE CREATED somewhere.
 3. **locate pipeps.log**: it should be on /var/log or /tmp or C:\Windows\Temp or maybe in sys_get_temp_dir() folder ...or near index.php (this lastone alternative is NOT RECOMMENDED and you should AVOID it)
