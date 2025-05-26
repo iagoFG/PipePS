@@ -41,6 +41,10 @@ A basic site is provided in the folder example/ however if you need/want to setu
 
 ## HOW-TO make your own modules
 1. if not exists, create mod/ folder inside usr-.../
-2. create a php file named mod_YOURMODNAME.php and write this test code: <?php pout("[hello world from mod_YOURMODNAME]");
+2. create a php file named mod_YOURMODNAME.php and write this test code:
+```php
+     <?php
+       pout("[hello world from mod_YOURMODNAME]");
+```
 3. open the template where you want to include a call to the module, for example default.html and write {{YOURMODNAME}} wherever you want to place the call.
 4. open the browser and go to the page showing the template you modified in the previous step.
