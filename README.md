@@ -41,7 +41,7 @@ A basic site is provided in the folder example/ however if you need/want to setu
 
 ## HOW-TO make your own modules
 1. if not exists, create mod/ folder inside usr-.../
-2. create a php file named mod_YOURMODNAME.php and write this test code:
+2. create a php file named mod_YOURMODNAME.php (replace YOURMODNAME with whatever you want) and write this test code:
 ```php
      <?php
        pout("[hello world from mod_YOURMODNAME]");
