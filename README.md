@@ -29,7 +29,7 @@ PipePS will load and store all data resources including templates, editable sect
 
 ## HOW-TO manual setup (step-by-step)
 A basic site is provided in the folder example/ however if you need/want to setup manually the environment you can follow these instructions:
-1. **copy pipeps.min.php** into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
+1. **copy <a href="https://github.com/iagoFG/PipePS/blob/main/pipeps.min.php">pipeps.min.php</a>** into webserver, create index.php with: <?php include("../path/to/pipeps.min.php");
 2. **open the index.php** with your browser: should see a blank page: pipeps.log WILL BE CREATED somewhere.
 3. **locate pipeps.log**: it should be on /var/log or /tmp or C:\Windows\Temp or maybe in sys_get_temp_dir() folder ...or near index.php (this lastone alternative is NOT RECOMMENDED and you should AVOID it)
 4. **create your site folder**: localhost/ or domain.com/ or 12.34.56.78/ (whatever used in browser, check log)
