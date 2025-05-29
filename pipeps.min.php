@@ -1,4 +1,4 @@
-<?php /// PipePS @author info@iagoFG.com @license LGPL 2.1 /// custom per page launcher area (you can edit this area if needed, but is recommended to use html template files in site/usr/tpl) ///////////////
+<?php /// PipePS @author info@iagoFG.com @license MPL-2.0 /// custom per page launcher area (you can edit this area if needed, but is recommended to use html template files in site/usr/tpl) ///////////////
 
 if (!isset($GLOBALS['pipeps-config'])) { $GLOBALS['pipeps-config'] = array( /// if not defined, define some config values for pipeps (you can edit here or better in your own PHP that then includes this)
 	'mode' => 'buffer', /// selects how pipeps input/output is managed: buffer (for webs), flush (for rapid webservices) or cli (for apps); buffer enables a buffer and can filter errors, flush immediately send data (usesful for comet or sockets) and cli is forced/used for command line tools which can have interactive.
