@@ -4,8 +4,8 @@
 	/// @license MPL-2.0
 	/// custom per page launcher area (you can edit this area if needed, but is recommended to use html template files in site/usr/tpl) ///////////////
 	
-	if (!isset($GLOBALS['pipeps-config'])) {
-		$GLOBALS['pipeps-config'] = array( /// if not defined, define some config values for pipeps (you can edit here or better in your own PHP that then includes this)
+	function psetup() {
+		if (!isset($GLOBALS['pipeps-config'])) { $GLOBALS['pipeps-config'] = array( /// if not defined, define some config values for pipeps (you can edit here or better in your own PHP that then includes this)
 			'mode' => 'buffer', /// selects how pipeps input/output is managed: buffer (for webs), flush (for rapid webservices) or cli (for apps); buffer enables a buffer and can filter errors, flush immediately send data (usesful for comet or sockets) and cli is forced/used for command line tools which can have interactive.
 			'page' => array('/([^\/]+)\/index.php$/', '/([^\/]+).php$/', '/[\/]([^\.\/]+)\.[^\.\/]+[\/]?$/', '/[\/]([^\.\/]+)[\/]?$/'), /// default page patterns, usually no need to change; pipeps will use these patterns to autodetermine page/template to be loaded from browser parameters/uri/url/script file
 			'pipe' => array('edit' => ''), /// default pipe values
@@ -14,17 +14,13 @@
 			'actions' => array('init', 'checkbefore', 'etcfind', 'etcrun', 'i18n', 'doactions', 'tplfind', 'include', 'checkafter'), /// default action sequence, performed when pipeps is started; usually standard action sequence will look for and load configuration, then look for and load/run a template, but you can define your own and/or call steps manually
 			'log-path' => array('/var/log', '/tmp', 'c:/windows/temp', sys_get_temp_dir(), '.', TRUE), /// paths where to store log file/s; define your own log file, can use an array for defining various alternatives; use a string or use TRUE to use standard output, or FALSE to disable log output (not recomended); note that with pipeps all the non poutput with echo/var_export/... and other typical output, including errors will be dumped to this file (depending on mode)
 			'tmp-path' => array('/tmp', 'c:/windows/temp', '.'), /// paths where to store temporal files
-			'sites-path' => array(TRUE), /// paths where to look for site folders, fillin TRUE for using the default path: pipeps folder itself
+			'sites-path' => array(TRUE), /// paths where to look for site folders, fillin TRUE for using the default path: pipeps folder itself, otherwise can specify '.' or a relative or an absolute path
 			'usr-path' => array(TRUE), /// folders where to store the usr data, TRUE meaning is the default route within the site folder
 			'session-path' => array(TRUE, '/tmp'), /// folders where to store session files, TRUE meaning is the default path inside the site folder
 			'editable-path' => array(TRUE, '/tmp'), /// folders where to store editable contents, TRUE meaning is the default path inside the site folder
-		);
+		); }
 	}
-
-	if (!function_exists('main')) {
-		function main(&$ctx) {}
-	}  /// if not defined, define an empty main function; YOU CAN DEFINE your own in a SEPARATE FILE like the index.php including this file; main is called AFTER pipeps init sequence and actions, and before shutdown, so templates can be loaded and processed into output buffers but not yet sent to browser; if you need to change templates develop instead modules that can be called from templates, also you can define a $config['action'] array without 'tplfind', 'tplrun' and 'checkafter' and invoke yourself that steps; beyond here usually you should NOT change things
-
+	if (!function_exists('main')) { function main(&$ctx) {} }  /// if not defined, define an empty main function; YOU CAN DEFINE your own in a SEPARATE FILE like the index.php including this file; main is called AFTER pipeps init sequence and actions, and before shutdown, so templates can be loaded and processed into output buffers but not yet sent to browser; if you need to change templates develop instead modules that can be called from templates, also you can define a $config['action'] array without 'tplfind', 'tplrun' and 'checkafter' and invoke yourself that steps; beyond here usually you should NOT change things
 
 
 /// STARTUP/SHUTDOWN METHODS (life cycle) //////////////////////////////////////
@@ -2028,5 +2024,6 @@ if (!function_exists('debug_backtrace')) {
 
 
 if (!isset($GLOBALS['pipeps-mode']) || $GLOBALS['pipeps-mode'] !== -1) {
+	psetup();
 	main(pipeps($GLOBALS['pipeps-config']));    /// END OF METHOD DEFINITIONS (after this init pipeps and call main)
 }
