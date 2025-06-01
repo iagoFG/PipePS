@@ -1,5 +1,7 @@
 # PipePS
 
+
+
 ## An extensible & customizable minimalistic CMS with onsite content editor
 
 ```html
@@ -17,7 +19,7 @@
 ```
 Example of default.html in the tpl/ folder. You can also template any other format like json, xml or binary data, include your own modules and much more. PipePS has superfast response times (usually under 10ms), both headless and html modes, an agnostic template processor that can be used either on html, xml, json and many more formats. Mode is customizable by setting configuration variables before including pipeps.min.php: for example with $GLOBALS['pipeps-mode'] you can switch modes; it has a fully programmable life-cycle via actions list: with the **programmable main/default sequence at the top-most part configuration section of pipeps.min.php** (it runs a list of modules same as your own: init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter). Default sequence results in loading and rendering the site/url corresponding {{...}} template, default.html.
 
-You can easily create new editable sections by naming them with new tags, placing an {{editable ...}} block that will be replaced with its contents or, if you are logged in with a edit button that allows to change texts onsite:
+Get it at **<a href="https://github.com/iagoFG/PipePS/blob/main/pipeps.min.php">pipeps.min.php</a>**, install on your server and check HOW-TOs: you can easily create new editable sections by naming them with new tags, placing an {{editable ...}} block that will be replaced with its contents or, if you are logged in with a edit button that allows to change texts onsite:
 
 ![image](https://github.com/user-attachments/assets/36cfbf98-78a8-4a39-9fff-4b4c744a259c)
 
