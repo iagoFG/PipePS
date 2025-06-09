@@ -17,7 +17,7 @@
        </body>
      </html>
 ```
-Once installed (see the 9-step how-to on the bottom), this example of default.html in the tpl/ folder **displays a login panel and 3 text-blocks of editable contents** (by using login and editable builtin modules). Login with your user and editable contents will show an edit option and open an onsite editor.
+Once installed this example of default.html in the tpl/ folder **displays a login panel and 3 text-blocks of editable contents** allowing to edit onsite once logged. For more info check the 9-step how-to section at the bottom.
 
 You can also template any other format like json, xml or binary data, include your own modules and much more. PipePS has superfast response times (usually under 10ms), both headless and html modes, an agnostic template processor that can be used either on html, xml, json and many more formats. Mode is customizable by setting configuration variables before including pipeps.min.php: for example with $GLOBALS['pipeps-mode'] you can switch modes; it has a fully programmable life-cycle via actions list: with the **programmable main/default sequence at the top-most part configuration section of pipeps.min.php** (it runs a list of modules same as your own: init, checkbefore, etcfind, etcrun, i18n, doactions, tplfind, include and checkafter). Default sequence results in loading and rendering the site/url corresponding {{...}} template, default.html.
 
