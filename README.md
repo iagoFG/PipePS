@@ -1,4 +1,4 @@
-# PipePS - an extensible & customizable minimalistic CMS with onsite content editor
+# PipePS - an extensible & customizable<br>minimalistic CMS with onsite wysiwyg content editor
 
 ## Features
 
