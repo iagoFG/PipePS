@@ -1,4 +1,4 @@
-# PipePS
+# PipePS - an extensible & customizable minimalistic CMS with onsite content editor
 
 ## Features
 
@@ -10,7 +10,7 @@
  * it is designed for wide-compatibility from 4.0.0 to the latest PHP 8: it will run without hesitation on any hardware.
  * pragmatic design: avoids rainbow attacks by offseting hashes, multisite support and low dependency profile.
 
-## An extensible & customizable minimalistic CMS with onsite content editor
+## Example
 
 ```html
      <!DOCTYPE html>
