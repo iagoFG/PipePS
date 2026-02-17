@@ -6,7 +6,7 @@
  * headless mode, no bottlenecks, low resource consumption, ultra-fast dynamic & editable interactive contents.
  * virtual agnostic I/O: allows multiple parallel instances and data backends: disk, sql or distributed net resources.
  * simplified default serialization format, based on url-encoding format allows less space consumption.
- * non-minified code included but minified code recomended: 20% faster and displays important function prototypes.
+ * non-minified code available, but minified is 20% faster and displays important function reference at glance.
  * it is designed for wide-compatibility from 4.0.0 to the latest PHP 8: it will run without hesitation on any hardware.
  * pragmatic design: avoids rainbow attacks by offseting hashes, multisite support and low dependency profile.
 
