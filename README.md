@@ -2,11 +2,11 @@
 
 ## Features
 
- * extensible via module or modulepacks, this project is based on a "micro-kernel" arquitecture pattern, but including basic behaviours.
- * headless compatibility, no bottlenecks and very low resource consumption for ultra-fast dynamic & editable interactive contents.
- * virtual agnostic I/O functionalities, allows multiple parallel instances, multiple data backends: disk, sql or distributed network resources.
- * default serialization format more efficient, based on simplified url-encoding standard format allows less space consumption.
- * both minified and non-minified core code available (minified code is 20% faster and crafted for display most important function refs).
+ * extensible via modulepacks, based on a "micro-kernel" arquitecture pattern, yet including basic functionality.
+ * headless mode, no bottlenecks, very low resource consumption: ultra-fast dynamic & editable interactive contents.
+ * virtual agnostic I/O: allows multiple parallel instances and data backends: disk, sql or distributed net resources.
+ * more efficient default serialization format, based on simplified url-encoding format allows less space consumption.
+ * non-minified code available, but minified code is 20% faster and crafted for displaying most important function refs.
  * it is designed for wide-compatibility from 4.0.0 to the latest PHP 8: it will run without hesitation on any hardware.
  * pragmatic design: avoids rainbow attacks by offseting hashes, multisite support and low dependency profile.
 
